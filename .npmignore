@@ -1,0 +1,15 @@
+# Outputs
+coverage/*
+
+#tests
+test
+coverage
+
+#build tools
+.travis.yml
+.codeclimate.yml
+
+#settings
+.idea
+.editorconfig
+.github
