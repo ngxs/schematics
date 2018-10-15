@@ -1,0 +1,27 @@
+{
+  "name": "NGXS-schematics",
+  "version": "0.0.0",
+  "description": "NGXS schematics for Angular",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine **/*_spec.js"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^0.8.5",
+    "@angular-devkit/schematics": "^0.8.5",
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.31",
+    "jasmine": "^2.8.0",
+    "pluralize": "^7.0.0",
+    "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "@schematics/angular": "^0.8.5"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "store": {
+      "aliases": ["as"],
+      "description": "A store",
+      "factory": "./store/index",
+      "schema": "./store/schema.json"
+    }
+  }
+}
