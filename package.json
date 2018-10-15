@@ -1,27 +1,55 @@
 {
-  "name": "NGXS-schematics",
+  "name": "@ngxs/schematics",
   "version": "0.0.0",
   "description": "NGXS schematics for Angular",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine **/*_spec.js"
+    "prepublishOnly": "npm run build",
+    "build": "tsc -p tsconfig.app.json",
+    "lint": "tslint --project tsconfig.app.json",
+    "test": "npm run build && jest --no-cache --config test/jest.config.json --forceExit --detectOpenHandles --maxWorkers=2",
+    "test:dev": "npm run -s test -- --watchAll"
   },
   "keywords": [
-    "schematics"
+    "schematics",
+    "ngxs",
+    "cli",
+    "angular"
   ],
-  "author": "",
+  "author": "Kirill Yusupov",
+  "contributors": [
+    {
+      "name": "Austin McDaniel"
+    },
+    {
+      "name": "Danny Blue"
+    },
+    {
+      "name": "Leon Radley"
+    },
+    {
+      "name": "Mark Whitfeld"
+    },
+    {
+      "name": "Maxim Ivanov"
+    }
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngxs/schematics/issues"
+  },
+  "homepage": "https://github.com/ngxs/schematics#readme",
   "schematics": "./src/collection.json",
   "dependencies": {
     "@angular-devkit/core": "^0.8.5",
     "@angular-devkit/schematics": "^0.8.5",
-    "@types/jasmine": "^2.6.0",
-    "@types/node": "^8.0.31",
-    "jasmine": "^2.8.0",
-    "pluralize": "^7.0.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.9.2"
   },
   "devDependencies": {
-    "@schematics/angular": "^0.8.5"
+    "@schematics/angular": "^0.8.5",
+    "@types/jest": "^23.3.5",
+    "@types/node": "^8.10.36",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0"
   }
 }
