@@ -39,7 +39,7 @@ export const LIB_CONFIG: LibConfigInterface[] = [
         overwrite: true
     },
     {
-        type: NodeDependencyType.Dev,
+        type: NodeDependencyType.Default,
         name: LIBRARIES.SCHEMATICS,
         version: '^1.0.0',
         overwrite: true

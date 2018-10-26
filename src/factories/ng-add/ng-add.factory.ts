@@ -15,6 +15,7 @@ export function ngAdd(options: NgxsPackageSchema): Rule {
 
 function addNgxsPackageToPackageJson() {
     return (host: Tree, context: SchematicContext) => {
+        context.logger.info('Adding npm dependencies');
         LIB_CONFIG.forEach(({ type, version, name, overwrite }: LibConfigInterface) => {
             addPackageJsonDependency(host, { type, version, name, overwrite });
             context.logger.log('info', `✅️ Added "${name}" into ${type}`);
@@ -32,6 +33,7 @@ function runNpmPackageInstall() {
 
 function setSchematicsAsDefault(): Rule {
     return (host: Tree, context: SchematicContext) => {
+        context.logger.info('Adding @ngxs/schematics to angular.json');
         const exec = require('child_process').exec;
 
         exec('ng config cli.defaultCollection ngxs-schematics', () => {
