@@ -24,8 +24,11 @@
     },
     "ng-add": {
       "factory": "./factories/ng-add/ng-add.factory#ngAdd",
-      "description": "Add Ngxs Store and plugins in package.json",
-      "aliases": ["ngxs-init"]
+      "description": "Add Ngxs Store and plugins in package.json"
+    },
+    "ng-new": {
+      "factory": "./factories/ng-new/ng-new.factory#ngNew",
+      "description": "Create a new Angular application with Ngxs Store."
     }
   }
 }
