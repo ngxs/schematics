@@ -2,9 +2,23 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { DictionaryResponseModel } from './model/dictionary-response.model';
 import { DictionaryReset, SetDictionaryData } from './dictionary.actions';
 
-@State({
+export interface DictionaryStateModel {
+     content: any[];
+     page: number;
+     size: number;
+     totalPages: number;
+     totalElements: number;
+}
+
+@State<DictionaryStateModel>({
     name: 'dictionary',
-    defaults: new DictionaryResponseModel()
+    defaults: {
+        content: [],
+        page: 0,
+        size: 0,
+        totalPages: 0,
+        totalElements: 0
+    }
 })
 export class DictionaryState {
 

@@ -13,7 +13,9 @@ describe('<%= classify(name) %> state', () => {
 
     it('should create an empty state', () => {
         const expected = store.selectSnapshot(<%= classify(name) %>State.getState);
-        const actual: <%= classify(name) %>StateModel = new <%= classify(name) %>StateModel();
+        const actual: <%= classify(name) %>StateModel = {
+            items: []
+        };
         expect(expected).toEqual(actual);
     });
 

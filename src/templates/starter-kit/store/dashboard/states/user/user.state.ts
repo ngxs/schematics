@@ -2,9 +2,31 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Person } from './model/person.model';
 import { SetUser } from './user.actions';
 
-@State<Person>({
+export interface PersonStateModel {
+    userId: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+    fullName: string;
+    positionId: string;
+    positionName: string;
+    departmentCode: string;
+    departmentName: string;
+}
+
+@State<PersonStateModel>({
     name: 'user',
-    defaults: new Person()
+    defaults: {
+        userId: '',
+        email: '',
+        firstName: '',
+        lastName: '',
+        fullName: '',
+        positionId: '',
+        positionName: '',
+        departmentCode: '',
+        departmentName: ''
+    }
 })
 export class UserState {
 

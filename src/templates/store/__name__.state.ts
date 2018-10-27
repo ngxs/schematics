@@ -1,13 +1,15 @@
 import { State, Action, Selector, StateContext } from '@ngxs/store';
 import { <%= classify(name) %>Action } from './<%= dasherize(name) %>.actions';
 
-export class <%= classify(name) %>StateModel {
-  public items: string[] = [];
+export interface <%= classify(name) %>StateModel {
+  items: string[];
 }
 
 @State<<%= classify(name) %>StateModel>({
   name: '<%= camelize(name) %>',
-  defaults: new <%= classify(name) %>StateModel()
+  defaults: {
+    items: []
+  }
 })
 export class <%= classify(name) %>State {
 

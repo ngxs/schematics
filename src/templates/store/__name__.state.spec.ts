@@ -13,7 +13,9 @@ describe('<%= classify(name) %> store', () => {
   }));
 
   it('should create an action and add an item', () => {
-    const todo: TodoStateModel = new TodoStateModel();
+    const todo: <%= classify(name) %>StateModel = {
+      items: []
+    };
     todo.items = ['item-1'];
     store.dispatch(new <%= classify(name) %>Action('item-1'));
     const expected = store.selectSnapshot(<%= classify(name) %>State.getState);

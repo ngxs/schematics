@@ -2,9 +2,25 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Authentication } from './model/auth.model';
 import { GetAuthData } from './auth.actions';
 
-@State<Authentication>({
+export interface AuthenticationStateModel {
+    id: string;
+    firstName: string;
+    lastName: string;
+    fullName: string;
+    email: string;
+    roles: string[];
+}
+
+@State<AuthenticationStateModel>({
     name: 'authStateModule',
-    defaults: new Authentication()
+    defaults: {
+        id: '',
+        firstName: '',
+        lastName: '',
+        fullName: '',
+        email: '',
+        roles: []
+    }
 })
 export class AuthStateModule {
 
