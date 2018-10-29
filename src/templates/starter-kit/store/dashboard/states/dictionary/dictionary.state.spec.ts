@@ -43,8 +43,8 @@ describe('[TEST]: Dictionary state', () => {
             totalElements: 0
         };
         store.dispatch(new SetDictionaryData(dictionary));
-        const expected = store.selectSnapshot(DictionaryState.getDictionaryState);
-        expect(expected).toEqual(dictionary);
+        const actual = store.selectSnapshot(DictionaryState.getDictionaryState);
+        expect(actual).toEqual(dictionary);
     });
 
     it('Should be state is filled DictionaryStateModel', () => {
@@ -56,8 +56,8 @@ describe('[TEST]: Dictionary state', () => {
             totalElements: 1
         };
         store.dispatch(new SetDictionaryData(dictionary));
-        const expected = store.selectSnapshot(DictionaryState.getDictionaryState);
-        expect(dictionary).toEqual(expected);
+        const actual = store.selectSnapshot(DictionaryState.getDictionaryState);
+        expect(actual).toEqual(dictionary);
     });
 
     it('should be reset state', function () {
@@ -69,8 +69,8 @@ describe('[TEST]: Dictionary state', () => {
             totalElements: 0
         };
         store.dispatch(new DictionaryReset());
-        const expected = store.selectSnapshot(DictionaryState.getDictionaryState);
-        expect(expected).toEqual(dictionary);
+        const actual = store.selectSnapshot(DictionaryState.getDictionaryState);
+        expect(actual).toEqual(dictionary);
     });
 
 });
