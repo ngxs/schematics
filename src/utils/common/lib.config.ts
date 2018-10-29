@@ -2,7 +2,7 @@ export enum LIBRARIES {
     STORE = '@ngxs/store',
     LOGGER = '@ngxs/logger-plugin',
     DEVTOOLS = '@ngxs/devtools-plugin',
-    SCHEMATICS = 'ngxs-schematics'
+    SCHEMATICS = '@ngxs/schematics'
 }
 
 export enum NodeDependencyType {

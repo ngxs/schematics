@@ -12,11 +12,11 @@ describe('<%= classify(name) %> state', () => {
     }));
 
     it('should create an empty state', () => {
-        const expected = store.selectSnapshot(<%= classify(name) %>State.getState);
-        const actual: <%= classify(name) %>StateModel = {
+        const actual = store.selectSnapshot(<%= classify(name) %>State.getState);
+        const expected: <%= classify(name) %>StateModel = {
             items: []
         };
-        expect(expected).toEqual(actual);
+        expect(actual).toEqual(expected);
     });
 
 });

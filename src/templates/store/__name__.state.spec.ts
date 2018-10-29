@@ -13,13 +13,12 @@ describe('<%= classify(name) %> store', () => {
   }));
 
   it('should create an action and add an item', () => {
-    const todo: <%= classify(name) %>StateModel = {
-      items: []
+    const expected: <%= classify(name) %>StateModel = {
+      items: ['item-1']
     };
-    todo.items = ['item-1'];
     store.dispatch(new <%= classify(name) %>Action('item-1'));
-    const expected = store.selectSnapshot(<%= classify(name) %>State.getState);
-    expect(expected).toEqual(todo);
+    const actual = store.selectSnapshot(<%= classify(name) %>State.getState);
+    expect(actual).toEqual(expected);
   });
 
 });

@@ -35,33 +35,33 @@ describe('[TEST]: Dictionary state', () => {
     }));
 
     it('Should be correct dispatch and dictionary is empty', () => {
-        const Dictionary: DictionaryStateModel = {
+        const dictionary: DictionaryStateModel = {
             content: [],
             page: 0,
             size: 0,
             totalPages: 0,
             totalElements: 0
         };
-        store.dispatch(new SetDictionaryData(Dictionary));
+        store.dispatch(new SetDictionaryData(dictionary));
         const expected = store.selectSnapshot(DictionaryState.getDictionaryState);
-        expect(expected).toEqual(Dictionary);
+        expect(expected).toEqual(dictionary);
     });
 
     it('Should be state is filled DictionaryStateModel', () => {
-        const Dictionary: DictionaryStateModel = {
+        const dictionary: DictionaryStateModel = {
             content: data,
             page: 0,
             size: 20,
             totalPages: 2,
             totalElements: 1
         };
-        store.dispatch(new SetDictionaryData(Dictionary));
+        store.dispatch(new SetDictionaryData(dictionary));
         const expected = store.selectSnapshot(DictionaryState.getDictionaryState);
-        expect(Dictionary).toEqual(expected);
+        expect(dictionary).toEqual(expected);
     });
 
     it('should be reset state', function () {
-        const Dictionary: DictionaryStateModel = {
+        const dictionary: DictionaryStateModel = {
             content: [],
             page: 0,
             size: 0,
@@ -70,7 +70,7 @@ describe('[TEST]: Dictionary state', () => {
         };
         store.dispatch(new DictionaryReset());
         const expected = store.selectSnapshot(DictionaryState.getDictionaryState);
-        expect(expected).toEqual(Dictionary);
+        expect(expected).toEqual(dictionary);
     });
 
 });
