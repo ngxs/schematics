@@ -23,9 +23,8 @@ describe('[TEST]: AuthStore', () => {
             roles: []
         };
         store.dispatch(new SetAuthData(Authentication));
-        store.selectOnce(AuthStateModule.getAuthData).subscribe((authData) => {
-            expect(authData).toEqual(Authentication);
-        });
+        const actual = store.selectSnapshot<AuthenticationStateModel>(AuthStateModule.getAuthData);
+        expect(actual).toEqual(Authentication);
 
     });
 
@@ -40,9 +39,8 @@ describe('[TEST]: AuthStore', () => {
         };
 
         store.dispatch(new SetAuthData(authentication));
-        store.selectOnce(AuthStateModule.getAuthData).subscribe((authData) => {
-            expect(authData).toEqual(authentication);
-        });
+        const actual = store.selectSnapshot<AuthenticationStateModel>(AuthStateModule.getAuthData);
+        expect(actual).toEqual(authentication);
 
     });
 
