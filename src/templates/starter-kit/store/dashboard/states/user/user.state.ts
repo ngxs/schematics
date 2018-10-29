@@ -35,7 +35,7 @@ export class UserState {
     }
 
     @Action(SetUser)
-    public update(ctx: StateContext<PersonStateModel>, { payload }: SetUser) {
+    public setUser(ctx: StateContext<PersonStateModel>, { payload }: SetUser) {
         ctx.setState(payload);
     }
 
