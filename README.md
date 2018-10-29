@@ -26,7 +26,8 @@ npm i -g @angular/cli
 npm i @ngxs/schematics
 ```
 
-### Easy way to add NGXS Store in your application
+### Easy way to add NGXS Store in your application 
+
 To add NGXS Store in application, you can use `ng add` with `@ngxs/schematics`.
 
 ```bash
@@ -60,6 +61,46 @@ Installed packages for tooling via npm.
 ```
 
 ## Usage
+
+### Generating Components
+
+You can use the ng generate (or just ng g) command to generate ngxs components:
+
+```bash
+ng generate @ngxs/schematics:store --name todo
+ng g @ngxs/schematics:store --name todo
+```
+
+All possible commands in the table below:
+
+| Scaffold | Usage | Aliases | Options
+| --- | --- | --- | ---
+| Store | ng g @ngxs/schematics:store | ngxs-store | --name (required), --path, --sourceRoot, --spec (boolean)
+| State | ng g @ngxs/schematics:state | ngxs-state | --name (required), --path, --sourceRoot, --spec (boolean)
+| Actions | ng g @ngxs/schematics:actions | ngxs-actions | --name (required), --path, --sourceRoot
+| Starter Kit | ng g @ngxs/schematics:starter-kit | ngxs-sk | --path, --sourceRoot, --spec (boolean)
+
+### Aliases
+
+For used the aliases you need to set @ngxs/schematics as the default collection. Update your project's `angular.json`:
+
+```json
+"cli": {
+  "defaultCollection": "ngxs-schematics"
+}
+```
+
+Or simply use `ng add @ngxs/schematics --skipInstall`
+
+### Options
+
+`--name` - there is a name of your store, state or actions <br />
+`--spec` - flag that allow to generate the test file <br />
+`--sourceRoot` - absolute path to create your files (in default - `src`) <br />
+`--path` - path relative to `--sourceRoot` (for example, `--path=app` -> `/src/app`)
+
+
+## Examples
 
 ### Create a NGXS Store
 To generate store with `@ngxs/schematics`:
