@@ -1,6 +1,5 @@
 import { Action, Selector, State, StateContext } from '@ngxs/store';
-import { Authentication } from './model/auth.model';
-import { GetAuthData } from './auth.actions';
+import { SetAuthData } from './auth.actions';
 
 export interface AuthenticationStateModel {
     id: string;
@@ -37,8 +36,8 @@ export class AuthStateModule {
         return { ...state };
     }
 
-    @Action(GetAuthData)
-    public get({ setState }: StateContext<AuthenticationStateModel>, { payload }: GetAuthData) {
+    @Action(SetAuthData)
+    public get({ setState }: StateContext<AuthenticationStateModel>, { payload }: SetAuthData) {
         setState(AuthStateModule.setInstanceState(payload));
     }
 

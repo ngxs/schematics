@@ -1,7 +1,7 @@
 import { NgxsModule, Store } from '@ngxs/store';
 import { async, TestBed } from '@angular/core/testing';
 import { AuthenticationStateModel, AuthStateModule } from './auth.state';
-import { GetAuthData } from './auth.actions';
+import { SetAuthData } from './auth.actions';
 
 describe('[TEST]: AuthStore', () => {
     let store: Store;
@@ -22,11 +22,9 @@ describe('[TEST]: AuthStore', () => {
             email: '',
             roles: []
         };
-        store.dispatch(new GetAuthData(Authentication));
-
+        store.dispatch(new SetAuthData(Authentication));
         store.selectOnce(AuthStateModule.getAuthData).subscribe((authData) => {
-            const expected = authData;
-            expect(expected).toEqual(Authentication);
+            expect(authData).toEqual(Authentication);
         });
 
     });
@@ -41,11 +39,9 @@ describe('[TEST]: AuthStore', () => {
             roles: ['ADMIN']
         };
 
-        store.dispatch(new GetAuthData(authentication));
-
+        store.dispatch(new SetAuthData(authentication));
         store.selectOnce(AuthStateModule.getAuthData).subscribe((authData) => {
-            const expected = authData;
-            expect(expected).toEqual(authentication);
+            expect(authData).toEqual(authentication);
         });
 
     });
