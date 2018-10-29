@@ -32,7 +32,7 @@ describe('[TEST]: AuthStore', () => {
     });
 
     it('Should be correct dispatch and next value is correct completed', () => {
-        const Authentication: AuthenticationStateModel = {
+        const authentication: AuthenticationStateModel = {
             id: '12',
             firstName: 'Adam',
             lastName: 'Gordon',
@@ -41,11 +41,11 @@ describe('[TEST]: AuthStore', () => {
             roles: ['ADMIN']
         };
 
-        store.dispatch(new GetAuthData(Authentication));
+        store.dispatch(new GetAuthData(authentication));
 
         store.selectOnce(AuthStateModule.getAuthData).subscribe((authData) => {
             const expected = authData;
-            expect(expected).toEqual(Authentication);
+            expect(expected).toEqual(authentication);
         });
 
     });

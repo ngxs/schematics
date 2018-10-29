@@ -14,7 +14,7 @@ describe('[TEST]: User state', () => {
     }));
 
     it('Should be state is PersonStateModel', () => {
-        const User: PersonStateModel = {
+        const person: PersonStateModel = {
             userId: '',
             departmentCode: '',
             departmentName: '',
@@ -25,16 +25,16 @@ describe('[TEST]: User state', () => {
             positionId: '',
             positionName: ''
         };
-        store.dispatch(new SetUser(User));
-        const expected = store.selectSnapshot(
+        store.dispatch(new SetUser(person));
+        const actual = store.selectSnapshot(
             ({ user }) => user
         );
 
-        expect(expected).toEqual(User);
+        expect(actual).toEqual(person);
     });
 
     it('Should be state is filled PersonStateModel', () => {
-        const User: PersonStateModel = {
+        const person: PersonStateModel = {
             userId: '12',
             departmentCode: '2392',
             departmentName: 'Main office',
@@ -46,14 +46,12 @@ describe('[TEST]: User state', () => {
             positionName: 'admin'
         };
 
-        const actual = User;
-
-        store.dispatch(new SetUser(User));
-        const expected = store.selectSnapshot<PersonStateModel>(
+        store.dispatch(new SetUser(person));
+        const actual = store.selectSnapshot<PersonStateModel>(
             ({ user }) => user
         );
 
-        expect(actual).toEqual(expected);
+        expect(actual).toEqual(person);
 
     });
 });
