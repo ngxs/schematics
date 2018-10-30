@@ -86,7 +86,7 @@ For used the aliases you need to set @ngxs/schematics as the default collection.
 
 ```json
 "cli": {
-  "defaultCollection": "ngxs-schematics"
+  "defaultCollection": "@ngxs/schematics"
 }
 ```
 
