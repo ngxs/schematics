@@ -188,14 +188,11 @@ CREATE src/store/store.config.ts
 CREATE src/store/store.module.ts
 CREATE src/store/auth/auth.actions.ts
 CREATE src/store/auth/auth.state.ts
-CREATE src/store/auth/model/auth.model.ts
 CREATE src/store/dashboard/index.ts
 CREATE src/store/dashboard/states/dictionary/dictionary.actions.ts
 CREATE src/store/dashboard/states/dictionary/dictionary.state.ts
-CREATE src/store/dashboard/states/dictionary/model/dictionary-response.model.ts
 CREATE src/store/dashboard/states/user/user.actions.ts
 CREATE src/store/dashboard/states/user/user.state.ts
-CREATE src/store/dashboard/states/user/model/person.model.ts
 ```
 
 Or with spec:
@@ -212,14 +209,11 @@ CREATE src/store/store.module.ts
 CREATE src/store/auth/auth.actions.ts
 CREATE src/store/auth/auth.state.spec.ts
 CREATE src/store/auth/auth.state.ts
-CREATE src/store/auth/model/auth.model.ts
 CREATE src/store/dashboard/index.ts
 CREATE src/store/dashboard/states/dictionary/dictionary.actions.ts
 CREATE src/store/dashboard/states/dictionary/dictionary.state.spec.ts
 CREATE src/store/dashboard/states/dictionary/dictionary.state.ts
-CREATE src/store/dashboard/states/dictionary/model/dictionary-response.model.ts
 CREATE src/store/dashboard/states/user/user.actions.ts
 CREATE src/store/dashboard/states/user/user.state.spec.ts
 CREATE src/store/dashboard/states/user/user.state.ts
-CREATE src/store/dashboard/states/user/model/person.model.ts
 ```
