@@ -5,6 +5,7 @@
 <p align="center">This repository contains schematics for generating NGXS Store in Angular apps using the Angular CLI.</p>
 <p align="center">
 <a href="https://travis-ci.org/ngxs/schematics"><img src="https://travis-ci.org/ngxs/schematics.svg?branch=master" /></a>
+<a href="https://badge.fury.io/js/%40ngxs%2Fschematics"><img src="https://badge.fury.io/js/%40ngxs%2Fschematics.svg"></a> 
 <a href="https://github.com/ngxs/schematics/blob/master/LICENCE"><img src="https://img.shields.io/badge/License-MIT-green.svg" /></a>
 <a href="https://codeclimate.com/github/ngxs/schematics/maintainability"><img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/maintainability" /></a>
 <a href="https://codeclimate.com/github/ngxs/schematics/test_coverage"><img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/test_coverage" /></a>
