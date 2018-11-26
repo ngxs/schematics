@@ -1,6 +1,6 @@
 {
   "name": "@ngxs/schematics",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",  
   "description": "NGXS schematics for Angular",
   "scripts": {
     "prepublishOnly": "npm run build",
@@ -19,12 +19,6 @@
   "contributors": [
     {
       "name": "Austin McDaniel"
-    },
-    {
-      "name": "Danny Blue"
-    },
-    {
-      "name": "Leon Radley"
     },
     {
       "name": "Mark Whitfeld"
