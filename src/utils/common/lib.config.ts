@@ -1,3 +1,5 @@
+const packageJson = require('../../../package.json');
+
 export enum LIBRARIES {
     STORE = '@ngxs/store',
     LOGGER = '@ngxs/logger-plugin',
@@ -41,7 +43,7 @@ export const LIB_CONFIG: LibConfigInterface[] = [
     {
         type: NodeDependencyType.Default,
         name: LIBRARIES.SCHEMATICS,
-        version: '^1.0.0',
+        version: `^${packageJson.version}`,
         overwrite: true
     }
 ];
