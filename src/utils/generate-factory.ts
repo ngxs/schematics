@@ -5,16 +5,13 @@ import { GenerateFactoryInterface } from './interfaces/generate-factory.interfac
 import { Parser } from './parser';
 
 export function generate({ options, factory }: Partial<GenerateFactoryInterface>): Source {
-    const parser: Parser = new Parser();
-    return apply(
-        url(join('../../templates' as Path, factory)),
-        [
-            parser.specParser(options.spec),
-            template({
-                ...strings,
-                ...options,
-            }),
-            move(options.path),
-        ],
-    );
+  const parser: Parser = new Parser();
+  return apply(url(join('../../templates' as Path, factory)), [
+    parser.specParser(options.spec),
+    template({
+      ...strings,
+      ...options
+    }),
+    move(options.path)
+  ]);
 }

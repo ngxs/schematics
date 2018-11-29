@@ -4,5 +4,5 @@ import { FACTORIES } from '../../utils';
 import { factoryLoader } from '../../utils/factory-loader';
 
 export function actions(options: ActionsSchema): Rule {
-    return factoryLoader<ActionsSchema>(options, FACTORIES.ACTIONS);
+  return factoryLoader<ActionsSchema>(options, FACTORIES.ACTIONS);
 }

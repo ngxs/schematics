@@ -1,15 +1,13 @@
 import { DictionaryStateModel } from './dictionary.state';
 
 export class SetDictionaryData {
-    public static readonly type = '[Dictionary] Set dictionary data action';
+  public static readonly type = '[Dictionary] Set dictionary data action';
 
-    constructor(public payload: DictionaryStateModel) {
-    }
+  constructor(public payload: DictionaryStateModel) {}
 }
 
 export class DictionaryReset {
-    public static readonly type = '[Dictionary] Reset dictionary action';
+  public static readonly type = '[Dictionary] Reset dictionary action';
 
-    constructor() {
-    }
+  constructor() {}
 }

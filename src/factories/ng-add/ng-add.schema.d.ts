@@ -1,6 +1,6 @@
 export interface NgxsPackageSchema {
-    /**
-     * The flag to skip packages installing.
-     */
-    skipInstall?: boolean;
+  /**
+   * The flag to skip packages installing.
+   */
+  skipInstall?: boolean;
 }
