@@ -20,9 +20,6 @@
     <a href="https://codeclimate.com/github/ngxs/schematics/test_coverage">
       <img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/test_coverage" />
     </a>
-    <a href="https://now-examples-slackin-eqzjxuxoem.now.sh/">
-      <img src="https://now-examples-slackin-eqzjxuxoem.now.sh/badge.svg">
-    </a>
     <a href="https://greenkeeper.io/">
       <img src="https://badges.greenkeeper.io/ngxs/schematics.svg">
     </a>
