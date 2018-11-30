@@ -14,6 +14,8 @@
   
 ## Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ngxs/schematics.svg)](https://greenkeeper.io/)
+
 ### Install Angular CLI
 
 You should be using `@angular/cli@6.1.0` or newer.
