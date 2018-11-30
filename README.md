@@ -1,20 +1,34 @@
 <p align="center">
   <img src="https://habrastorage.org/webt/y2/m3/yt/y2m3ytqadzph9hos5taqwyp6axw.png" />
 </p>
+
 <h1 align="center">Schematics</h1>
-<p align="center">This repository contains schematics for generating NGXS Store in Angular apps using the Angular CLI.</p>
-<p align="center">
-<a href="https://travis-ci.org/ngxs/schematics"><img src="https://travis-ci.org/ngxs/schematics.svg?branch=master" /></a>
-<a href="https://badge.fury.io/js/%40ngxs%2Fschematics"><img src="https://badge.fury.io/js/%40ngxs%2Fschematics.svg"></a> 
-<a href="https://github.com/ngxs/schematics/blob/master/LICENCE"><img src="https://img.shields.io/badge/License-MIT-green.svg" /></a>
-<a href="https://codeclimate.com/github/ngxs/schematics/maintainability"><img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/maintainability" /></a>
-<a href="https://codeclimate.com/github/ngxs/schematics/test_coverage"><img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/test_coverage" /></a>
-<a href="https://now-examples-slackin-eqzjxuxoem.now.sh/"><img src="https://now-examples-slackin-eqzjxuxoem.now.sh/badge.svg"></a>
+  <p align="center">This repository contains schematics for generating NGXS Store in Angular apps using the Angular CLI.</p>
+  <p align="center">
+    <a href="https://travis-ci.org/ngxs/schematics">
+      <img src="https://travis-ci.org/ngxs/schematics.svg?branch=master" />
+    </a>
+    <a href="https://badge.fury.io/js/%40ngxs%2Fschematics">
+      <img src="https://badge.fury.io/js/%40ngxs%2Fschematics.svg">
+    </a> 
+    <a href="https://github.com/ngxs/schematics/blob/master/LICENCE">
+      <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+    </a>
+    <a href="https://codeclimate.com/github/ngxs/schematics/maintainability">
+      <img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/maintainability" />
+    </a>
+    <a href="https://codeclimate.com/github/ngxs/schematics/test_coverage">
+      <img src="https://api.codeclimate.com/v1/badges/f5c522a094a9303cac05/test_coverage" />
+    </a>
+    <a href="https://now-examples-slackin-eqzjxuxoem.now.sh/">
+      <img src="https://now-examples-slackin-eqzjxuxoem.now.sh/badge.svg">
+    </a>
+    <a href="https://greenkeeper.io/">
+      <img src="https://badges.greenkeeper.io/ngxs/schematics.svg">
+    </a>
 </p>
   
 ## Installation
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/ngxs/schematics.svg)](https://greenkeeper.io/)
 
 ### Install Angular CLI
 
