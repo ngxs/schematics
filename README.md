@@ -62,7 +62,7 @@ Installed packages for tooling via npm.
   ✅️ Added "@ngxs/devtools-plugin" into dependencies
   ✅️ Added "@ngxs/logger-plugin" into dependencies
   ✅️ Added "@ngxs/store" into dependencies
-  ✅️ Added "@ngxs/schematics" into dependencies
+  ✅️ Added "@ngxs/schematics" into devDependencies
 
   Adding @ngxs/schematics to angular.json
 
