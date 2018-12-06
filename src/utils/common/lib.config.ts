@@ -25,23 +25,23 @@ export const LIB_CONFIG: LibConfigInterface[] = [
   {
     type: NodeDependencyType.Default,
     name: LIBRARIES.DEVTOOLS,
-    version: '^3.3.1',
+    version: '^3.3.2',
     overwrite: true
   },
   {
     type: NodeDependencyType.Default,
     name: LIBRARIES.LOGGER,
-    version: '^3.3.1',
+    version: '^3.3.2',
     overwrite: true
   },
   {
     type: NodeDependencyType.Default,
     name: LIBRARIES.STORE,
-    version: '^3.3.1',
+    version: '^3.3.2',
     overwrite: true
   },
   {
-    type: NodeDependencyType.Default,
+    type: NodeDependencyType.Dev,
     name: LIBRARIES.SCHEMATICS,
     version: `^${packageJson.version}`,
     overwrite: true
