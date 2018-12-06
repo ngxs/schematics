@@ -23,5 +23,6 @@ describe('ng-add package in package.json', () => {
     const packageJsonText = testTree.readContent('/package.json');
     const packageJson = JSON.parse(packageJsonText);
     expect(Object.keys(packageJson.dependencies)).toEqual(depsToAdd(NodeDependencyType.Default));
+    expect(Object.keys(packageJson.devDependencies)).toEqual(depsToAdd(NodeDependencyType.Dev));
   });
 });
