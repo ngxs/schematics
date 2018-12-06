@@ -36,7 +36,7 @@ function setSchematicsAsDefault(): Rule {
     context.logger.info('Adding @ngxs/schematics to angular.json');
     const exec = require('child_process').exec;
 
-    exec('ng config cli.defaultCollection ngxs-schematics', () => {
+    exec('ng config cli.defaultCollection @ngxs/schematics', () => {
       context.logger.log('info', `✅️ Setting NGXS Schematics as default`);
     });
     return host;
