@@ -1,6 +1,6 @@
 {
   "name": "@ngxs/schematics",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.2",
   "description": "NGXS schematics for Angular",
   "scripts": {
     "prepublishOnly": "npm run build",
@@ -8,7 +8,9 @@
     "lint": "tslint --project tsconfig.app.json",
     "test": "npm run build && jest --no-cache --config test/jest.config.json --forceExit --detectOpenHandles --maxWorkers=2",
     "test:dev": "npm run -s test -- --watchAll",
-    "format": "prettier --write '{src,test}/**/*.ts'"
+    "format": "prettier --write '{src,test}/**/*.ts'",
+    "publish:alpha": "npm publish --tag alpha --access public",
+    "publish:latest": "npm publish --tag latest --access public"
   },
   "keywords": [
     "schematics",
