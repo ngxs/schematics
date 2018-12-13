@@ -11,16 +11,26 @@ describe('Generate ngxs state', () => {
     };
     const tree: UnitTestTree = runner.runSchematic(FACTORIES.STATE, options);
     const files: string[] = tree.files;
-    expect(files).toEqual(['/src/todos/todos.state.ts']);
+    expect(files).toEqual(['/src/todos/todos.state.spec.ts', '/src/todos/todos.state.ts']);
   });
 
-  it('should manage name with spec', () => {
+  it('should manage name with spec true', () => {
     const options: StateSchema = {
       name: 'auth',
       spec: true
     };
-    const tree: UnitTestTree = runner.runSchematic('state', options);
+    const tree: UnitTestTree = runner.runSchematic(FACTORIES.STATE, options);
     const files: string[] = tree.files;
     expect(files).toEqual(['/src/auth/auth.state.spec.ts', '/src/auth/auth.state.ts']);
+  });
+
+  it('should manage name with spec false', () => {
+    const options: StateSchema = {
+      name: 'users',
+      spec: false
+    };
+    const tree: UnitTestTree = runner.runSchematic(FACTORIES.STATE, options);
+    const files: string[] = tree.files;
+    expect(files).toEqual(['/src/users/users.state.ts']);
   });
 });
