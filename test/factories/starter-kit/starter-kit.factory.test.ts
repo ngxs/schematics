@@ -4,7 +4,10 @@ import { FACTORIES } from '../../../src/utils';
 import { StarterKitSchema } from '../../../src/factories/starter-kit/starter-kit.schema';
 
 describe('Generate ngxs starter kit', () => {
-  const runner: SchematicTestRunner = new SchematicTestRunner('.', path.join(process.cwd(), 'src/collection.json'));
+  const runner: SchematicTestRunner = new SchematicTestRunner(
+    '.',
+    path.join(process.cwd(), 'src/collection.json')
+  );
   it('should generate store in default root folder', () => {
     const options: StarterKitSchema = {
       spec: true

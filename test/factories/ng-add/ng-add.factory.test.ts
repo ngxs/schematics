@@ -15,14 +15,21 @@ describe('ng-add package in package.json', () => {
 
   beforeEach(() => {
     inputTree = Tree.empty();
-    inputTree.create('/package.json', fs.readFileSync(path.join(__dirname, './common/package.json'), 'utf8'));
+    inputTree.create(
+      '/package.json',
+      fs.readFileSync(path.join(__dirname, './common/package.json'), 'utf8')
+    );
   });
 
   it('should add ngxs store with plugins in package.json', () => {
     testTree = runner.runSchematic('ng-add', {}, inputTree);
     const packageJsonText = testTree.readContent('/package.json');
     const packageJson = JSON.parse(packageJsonText);
-    expect(Object.keys(packageJson.dependencies)).toEqual(depsToAdd(NodeDependencyType.Default));
-    expect(Object.keys(packageJson.devDependencies)).toEqual(depsToAdd(NodeDependencyType.Dev));
+    expect(Object.keys(packageJson.dependencies)).toEqual(
+      depsToAdd(NodeDependencyType.Default)
+    );
+    expect(Object.keys(packageJson.devDependencies)).toEqual(
+      depsToAdd(NodeDependencyType.Dev)
+    );
   });
 });

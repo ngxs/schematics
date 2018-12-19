@@ -4,7 +4,10 @@ import { ActionsSchema } from '../../../src/factories/actions/actions.schema';
 import { FACTORIES } from '../../../src/utils';
 
 describe('NGXS Actions', () => {
-  const runner: SchematicTestRunner = new SchematicTestRunner('.', path.join(process.cwd(), 'src/collection.json'));
+  const runner: SchematicTestRunner = new SchematicTestRunner(
+    '.',
+    path.join(process.cwd(), 'src/collection.json')
+  );
   it('should manage name only', () => {
     const options: ActionsSchema = {
       name: 'todos'

@@ -45,7 +45,10 @@ function setSchematicsAsDefault(): Rule {
 
 function finallyLog(): Rule {
   return (host: Tree, context: SchematicContext) => {
-    context.logger.log('info', `👏 Create your first ngxs store by using starter kit: ng g ngxs-sk --spec`);
+    context.logger.log(
+      'info',
+      `👏 Create your first ngxs store by using starter kit: ng g ngxs-sk --spec`
+    );
 
     return host;
   };

@@ -13,7 +13,9 @@ export function transform<T>(options: T | any) {
 
 function setOptionsValue(target, defaultSourceRoot: string) {
   target.path =
-    target.path !== undefined ? join(normalize(defaultSourceRoot), target.path) : normalize(defaultSourceRoot);
+    target.path !== undefined
+      ? join(normalize(defaultSourceRoot), target.path)
+      : normalize(defaultSourceRoot);
 
   if (target.name) {
     const location: Location = new Parser().nameParser(target);

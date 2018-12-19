@@ -4,7 +4,10 @@ import { StoreSchema } from '../../../src/factories/store/store.schema';
 import { FACTORIES } from '../../../src/utils';
 
 describe('NGXS Store', () => {
-  const runner: SchematicTestRunner = new SchematicTestRunner('.', path.join(process.cwd(), 'src/collection.json'));
+  const runner: SchematicTestRunner = new SchematicTestRunner(
+    '.',
+    path.join(process.cwd(), 'src/collection.json')
+  );
   it('should manage name only', () => {
     const options: StoreSchema = {
       name: 'todos'

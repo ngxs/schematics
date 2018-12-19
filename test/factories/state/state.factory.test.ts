@@ -4,7 +4,10 @@ import { StateSchema } from '../../../src/factories/state/state.schema';
 import { FACTORIES } from '../../../src/utils';
 
 describe('Generate ngxs state', () => {
-  const runner: SchematicTestRunner = new SchematicTestRunner('.', path.join(process.cwd(), 'src/collection.json'));
+  const runner: SchematicTestRunner = new SchematicTestRunner(
+    '.',
+    path.join(process.cwd(), 'src/collection.json')
+  );
   it('should manage name only', () => {
     const options: StateSchema = {
       name: 'todos'

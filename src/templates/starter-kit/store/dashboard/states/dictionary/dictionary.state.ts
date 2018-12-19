@@ -39,7 +39,10 @@ export class DictionaryState {
   }
 
   @Action(SetDictionaryData)
-  public setTasks({ setState }: StateContext<DictionaryStateModel>, { payload }: SetDictionaryData) {
+  public setTasks(
+    { setState }: StateContext<DictionaryStateModel>,
+    { payload }: SetDictionaryData
+  ) {
     setState(DictionaryState.setInstanceState(payload));
   }
 

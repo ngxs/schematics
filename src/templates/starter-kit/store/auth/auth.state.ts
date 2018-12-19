@@ -36,7 +36,10 @@ export class AuthStateModule {
   }
 
   @Action(SetAuthData)
-  public setAuthData({ setState }: StateContext<AuthenticationStateModel>, { payload }: SetAuthData) {
+  public setAuthData(
+    { setState }: StateContext<AuthenticationStateModel>,
+    { payload }: SetAuthData
+  ) {
     setState(AuthStateModule.setInstanceState(payload));
   }
 }
