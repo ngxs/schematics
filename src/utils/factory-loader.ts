@@ -1,4 +1,4 @@
-import { transform } from './trasform-options';
+import { transform } from './transform-options';
 import { StarterKitSchema } from '../factories/starter-kit/starter-kit.schema';
 import { mergeWith, Rule } from '@angular-devkit/schematics';
 import { generate } from './generate-factory';
