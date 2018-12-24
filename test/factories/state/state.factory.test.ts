@@ -1,7 +1,11 @@
 import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/testing';
+
 import * as path from 'path';
-import { StateSchema } from '../../../src/factories/state/state.schema';
+
 import { FACTORIES } from '../../../src/utils';
+import { propertyNotEmpty } from '../common/properties';
+
+import { StateSchema } from '../../../src/factories/state/state.schema';
 
 describe('Generate ngxs state', () => {
   const runner: SchematicTestRunner = new SchematicTestRunner(
@@ -35,5 +39,9 @@ describe('Generate ngxs state', () => {
     const tree: UnitTestTree = runner.runSchematic(FACTORIES.STATE, options);
     const files: string[] = tree.files;
     expect(files).toEqual(['/src/users/users.state.ts']);
+  });
+
+  it('should error when name is empty', () => {
+    propertyNotEmpty(runner, FACTORIES.STORE, 'name');
   });
 });
