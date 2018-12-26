@@ -1,8 +1,13 @@
 import { chain, noop, Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
-import { LIB_CONFIG, LibConfigInterface } from '../../utils/common/lib.config';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
+import {
+  addPackageJsonDependency,
+  NodeDependency
+} from '@schematics/angular/utility/dependencies';
+
+import { LIB_CONFIG } from '../../utils/common/lib.config';
+
 import { NgxsPackageSchema } from './ng-add.schema';
-import { addPackageJsonDependency } from '@schematics/angular/utility/dependencies';
 
 export function ngAdd(options: NgxsPackageSchema): Rule {
   return chain([
@@ -16,7 +21,7 @@ export function ngAdd(options: NgxsPackageSchema): Rule {
 function addNgxsPackageToPackageJson() {
   return (host: Tree, context: SchematicContext) => {
     context.logger.info('Adding npm dependencies');
-    LIB_CONFIG.forEach(({ type, version, name, overwrite }: LibConfigInterface) => {
+    LIB_CONFIG.forEach(({ type, version, name, overwrite }: NodeDependency) => {
       addPackageJsonDependency(host, { type, version, name, overwrite });
       context.logger.log('info', `✅️ Added "${name}" into ${type}`);
     });

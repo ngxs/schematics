@@ -1,8 +1,10 @@
 import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/testing';
+import { Tree } from '@angular-devkit/schematics';
+import { NodeDependencyType } from '@schematics/angular/utility/dependencies';
+
 import * as path from 'path';
 import * as fs from 'fs';
-import { Tree } from '@angular-devkit/schematics';
-import { NodeDependencyType } from '../../../src/utils/common/lib.config';
+
 import { depsToAdd } from '../../../src/utils/get-library';
 
 describe('ng-add package in package.json', () => {

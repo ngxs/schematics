@@ -1,3 +1,5 @@
+import { NodeDependency, NodeDependencyType } from '@schematics/angular/utility/dependencies';
+
 const packageJson = require('../../../package.json');
 
 export enum LIBRARIES {
@@ -7,21 +9,7 @@ export enum LIBRARIES {
   SCHEMATICS = '@ngxs/schematics'
 }
 
-export enum NodeDependencyType {
-  Default = 'dependencies',
-  Dev = 'devDependencies',
-  Peer = 'peerDependencies',
-  Optional = 'optionalDependencies'
-}
-
-export interface LibConfigInterface {
-  type: NodeDependencyType;
-  name: string;
-  version: string;
-  overwrite?: boolean;
-}
-
-export const LIB_CONFIG: LibConfigInterface[] = [
+export const LIB_CONFIG: NodeDependency[] = [
   {
     type: NodeDependencyType.Default,
     name: LIBRARIES.DEVTOOLS,
