@@ -10,7 +10,8 @@
             "$default": {
                 "$source": "argv",
                 "index": 0
-            }
+            },
+            "x-prompt": "What name would you like to use for the actions?"
         },
         "path": {
             "type": "string",
@@ -23,5 +24,7 @@
             "description": "The source root path"
         }
     },
-    "required": []
+    "required": [
+        "name"
+    ]
 }
