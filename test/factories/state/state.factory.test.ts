@@ -42,6 +42,6 @@ describe('Generate ngxs state', () => {
   });
 
   it('should error when name is empty', () => {
-    propertyNotEmpty(runner, FACTORIES.STORE, 'name');
+    propertyNotEmpty(runner, FACTORIES.STATE, 'name');
   });
 });
