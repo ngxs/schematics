@@ -41,8 +41,8 @@
   "homepage": "https://github.com/ngxs/schematics#readme",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "9.0.3",
-    "@angular-devkit/schematics": "9.0.3",
+    "@angular-devkit/core": "9.0.4",
+    "@angular-devkit/schematics": "9.0.4",
     "typescript": "3.8.2"
   },
   "devDependencies": {
