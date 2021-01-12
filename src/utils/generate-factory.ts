@@ -3,6 +3,7 @@ import { join, Path } from '@angular-devkit/core';
 import * as strings from '@angular-devkit/core/src/utils/strings';
 import { GenerateFactoryInterface } from './interfaces/generate-factory.interface';
 import { Parser } from './parser';
+import { normalize } from 'path';
 
 export function generate({ options, factory }: Partial<GenerateFactoryInterface>): Source {
   const parser: Parser = new Parser();
@@ -12,6 +13,10 @@ export function generate({ options, factory }: Partial<GenerateFactoryInterface>
       ...strings,
       ...options
     }),
-    move(options.path)
+    move(
+      normalize(
+        `/${options.path}/` + (options.flat ? '' : strings.dasherize(options.name) + '/')
+      )
+    )
   ]);
 }
