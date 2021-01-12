@@ -2,6 +2,12 @@
   "extends": ["@schematics/angular"],
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
+    "module": {
+      "factory": "./factories/module/module.factory#module",
+      "description": "Create a NGXS full module",
+      "aliases": ["ngxs-module"],
+      "schema": "./factories/module/schema.json"
+    },
     "store": {
       "factory": "./factories/store/store.factory#store",
       "description": "Create a NGXS full store",

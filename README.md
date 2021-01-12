@@ -89,6 +89,7 @@ All possible commands in the table below:
 
 | Scaffold | Usage | Aliases | Options
 | --- | --- | --- | ---
+| Module | ng g @ngxs/schematics:module | ngxs-module | --name (required), --project, --path, --sourceRoot, --spec (boolean) --flat (boolean) 
 | Store | ng g @ngxs/schematics:store | ngxs-store | --name (required), --path, --sourceRoot, --spec (boolean)
 | State | ng g @ngxs/schematics:state | ngxs-state | --name (required), --path, --sourceRoot, --spec (boolean)
 | Actions | ng g @ngxs/schematics:actions | ngxs-actions | --name (required), --path, --sourceRoot
