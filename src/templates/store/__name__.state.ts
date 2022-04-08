@@ -5,6 +5,7 @@ export interface <%= classify(name) %>StateModel {
   items: string[];
 }
 
+@Injectable()
 @State<<%= classify(name) %>StateModel>({
   name: '<%= camelize(name) %>',
   defaults: {
