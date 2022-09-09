@@ -43,7 +43,7 @@
   "dependencies": {
     "@angular-devkit/core": "14.2.2",
     "@angular-devkit/schematics": "14.2.2",
-    "typescript": "4.8.2"
+    "typescript": "4.8.3"
   },
   "devDependencies": {
     "@commitlint/cli": "7.6.1",
