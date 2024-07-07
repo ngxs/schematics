@@ -1,3 +1,11 @@
+# ⚠️ DEPRECATED ⚠️
+
+**Deprecated:** This package is no longer actively maintained.
+
+💡 We recommend using the schematics from the [ngxs/store](https://www.ngxs.io/introduction/schematics) package.
+
+---
+
 <p align="center">
   <img src="https://habrastorage.org/webt/y2/m3/yt/y2m3ytqadzph9hos5taqwyp6axw.png" />
 </p>
